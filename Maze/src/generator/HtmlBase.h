@@ -5,21 +5,30 @@
  *      Author: Johannes
  */
 
-#ifndef SRC_GENERATOR_HTMLBASE_H_
-#define SRC_GENERATOR_HTMLBASE_H_
+#ifndef HTMLBASE_H
+#define HTMLBASE_H
+
+#include <string>
+
+using namespace std;
 
 namespace Maze {
 
 namespace generator {
 class HtmlBase
 {
+private:
+	string head, body;
+	string savePath = "html//";
 public:
-	HtmlBase();
+	HtmlBase(string, string);
 	virtual ~HtmlBase();
+
+	void generate(string);
 };
 
 }/* namespace generator */
 
 } /* namespace Maze */
 
-#endif /* SRC_GENERATOR_HTMLBASE_H_ */
+#endif /* HTMLBASE_H_ */
